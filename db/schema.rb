@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180906181146) do
+ActiveRecord::Schema.define(version: 20180910144653) do
 
   create_table "data_feeds", force: :cascade do |t|
     t.string "etd_record_key"
@@ -44,6 +44,13 @@ ActiveRecord::Schema.define(version: 20180906181146) do
     t.string "degree_code"
     t.string "degree_status_descr"
     t.date "degree_status_date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "integrations", force: :cascade do |t|
+    t.string "ip_address"
+    t.string "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
